@@ -1,0 +1,138 @@
+{
+	"position": "top",
+	"height": 40,
+	"spacing": 0,
+	"output": "HDMI-A-1",
+	"reload_style_on_change": true,
+	"mode": "dock",
+	"modules-left": ["sway/workspaces", "sway/window"],
+	"modules-right": ["disk", "network", "temperature", "cpu", "memory", "custom/clock"],
+	"sway/workspaces": {
+		"disable-scroll": false,
+		"disable-scroll-wraparound": true,
+		"enable-bar-scroll": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
+			"urgent": "",
+            "default": ""
+		}
+	},
+	"sway/window": {
+		"format": "{title}",
+		"separate-outputs": false,
+		"all-outputs": true,
+		"tooltip": false,
+		"rewrite": {
+			"foot": " ",
+			"Alacritty": " ",
+			"st": " ",
+			"\\[spaceman\\] (.*)": "  $1",
+			"\\[spaceman\\] exit (.*)": "  $1",
+			"(.*) - Chromium": " <span style=\"italic\">$1</span>",
+			"(.*) - mpv": " <span style=\"italic\">$1</span>",
+			"(.*) - VLC Media Player": "󰕼 <span style=\"italic\">$1</span>",
+			"VLC media player": "󰕼 ",
+			"Current Media Information": "󰕼 ",
+			"Simple Preferences": "󰕼 ",
+			"Adjustments and Effects": "󰕼 ",
+			"File Upload": " ",
+			"Volume Control": " ",
+			"Helvum - Pipewire Patchbay": " ",
+			"swayimg: (.*)": " <span style=\"italic\">$1</span>",
+			"(.*) :: PassThePopcorn": " <span style=\"italic\">$1</span>",
+			"(.*) :: Empornium": " <span style=\"italic\">$1</span>",
+			"(.*) - IPTorrents - \\#1 Private Tracker": " <span style=\"italic\">$1</span>",
+			"(.*) • Letterboxd": " <span style=\"italic\">$1</span>",
+			"Letterboxd • Social film discovery.": " ",
+			"(.*) - Rate Your Music": " <span style=\"italic\">$1</span>",
+			"(.*) · GitLab": " <span style=\"italic\">$1</span>",
+			"(.*) - ArchWiki": "󰣇 <span style=\"italic\">$1</span>",
+			"YouTube": " ",
+			"GitHub": " ",
+			"Explore GitHub": " ",
+			"GitHub Dashboard": " ",
+			"(.*) - Void Linux Handbook": " <span style=\"italic\">$1</span>",
+			"Tumblr": " ",
+			"(.*) Tumblr": " <span style=\"italic\">$1</span>",
+			"(.*) - Gmail": "󰊫 <span style=\"italic\">$1</span>",
+			"(.*) \\| Proton Mail": " <span style=\"italic\">$1</span>",
+			"(.*) on Tumblr": " <span style=\"italic\">$1</span>",
+			"(.*) - (.*) - Stack Overflow": " <span style=\"italic\">$2</span>",
+			"cava": " ",
+			"ncmpcpp (.*)": " <span style=\"italic\">$1</span>",
+			"zncmpcpp (.*) - (.*)": " $1 - <span style=\"italic\">$2</span>",
+			"ranger:(.*)": " $1",
+			"(.*) \\| Stash": " <span style=\"italic\">$1</span>",
+			"Stash": "  ",
+			"(.*) - Raspberry Pi Documentation": " <span style=\"italic\">$1</span>",
+			"(.*) - Raspberry Pi": " <span style=\"italic\">$1</span>",
+			"(.*) at DuckDuckGo": "󰇥 <span style=\"italic\">$1</span>",
+			"(.*) - Google Search": " <span style=\"italic\">$1</span>",
+			"(.*) - Invidious": " <span style=\"italic\">$1</span>",
+			"(.*) - YouTube": " <span style=\"italic\">$1</span>",
+			"(.*) - 4chan": "󰠖 <span style=\"italic\">$1</span>",
+			"Hacker News": " ",
+			"(.*) \\| Hacker News": " <span style=\"italic\">$1</span>",
+			"(.*) - (.*) - 4chan": "󰠖 <span style=\"italic\">$1</span>",
+		},
+		"max-length": 70
+	},
+	"disk": {
+		"path": "/",
+		"interval": 2,
+		"format": "󰐿 <span style=\"italic\">{free}</span>",
+		"format-alt": "󰐿 {used}",
+		"tooltip": false
+	},
+	"network": {
+		"interface": "eth0",
+		"interval": 1,
+		"format-ethernet": " {bandwidthDownBytes} {bandwidthUpBytes} ",
+		"format-alt": " {ipaddr} {netmask}",
+		"tooltip": false
+	},
+	"pulseaudio": {
+		"format": "{icon} <span style=\"italic\">{volume}%</span>",
+		"format-bluetooth": "{icon}  <span style=\"italic\">{volume}%</span>",
+		"format-bluetooth-muted": "  {volume}%",
+		"format-muted": " {volume}%",
+		"tooltip": true,
+		"tooltip-format": "{desc}",
+		"format-icons": {
+			"headphone": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol",
+		"on-click-right": "helvum"
+	},
+	"temperature": {
+		"thermal-zone": 1,
+		"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+		"format": " {temperatureF}°F",
+		"format-alt": " {temperatureC}°C"
+	},
+	"cpu": {
+		"format": " {usage}%",
+		"format-alt": " {avg_frequency} GHz {max_frequency} GHz",
+		"tooltip": false
+	},
+	"memory": {
+		"format": " {}%",
+        "format-alt": " {used:0.1f} GB",
+		"tooltip": false
+	},
+	"custom/clock": {
+		"exec": "date +'%I:%M:%S  %a, %b %d'",
+        "interval": 1,
+        "format": " {}",
+        "align": 1,
+        "tooltip": false
+	}
+}
+

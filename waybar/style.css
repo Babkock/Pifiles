@@ -1,0 +1,128 @@
+* {
+	font-family:"VictorMono Nerd Font";
+	font-size:23px;
+	background:transparent;
+	margin-bottom:1px;
+}
+
+tooltip {
+	border:none;
+	border-radius:0;
+	outline:none;
+	color:#fdfdfd;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+	margin-bottom:1px;
+	padding:0;
+}
+
+#window {
+	color:#fdfdfd;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+	padding-left:3px;
+}
+#cpu {
+	color:#e09690;
+	background:linear-gradient(180deg, rgba(200, 86, 70, 0.5), rgba(0, 0, 0, 0.4));
+	margin-right:0;
+	padding-left:7px;
+	padding-right:7px;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+}
+#disk {
+	color:#ffe377;
+	background:linear-gradient(180deg, rgba(209, 177, 61, 0.5), rgba(0, 0, 0, 0.4));
+	margin-right:0;
+	border-radius:36px 0px 0px 36px;
+	padding-left:11px;
+	padding-right:7px;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+}
+#pulseaudio, #custom-clock {
+	color:#cdee69;
+	background:linear-gradient(180deg, rgba(142, 179, 59, 0.5), rgba(0, 0, 0, 0.4));
+	padding-left:7px;
+	padding-right:7px;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+}
+#custom-clock {
+	border-radius:0px 36px 36px 0px;
+	margin-right:2px;
+	box-shadow:2px 3px rgba(205, 238, 105, 0.5);
+	padding-right:12px;
+}
+
+#network {
+	color:#fbb1f9;
+	background:linear-gradient(180deg, rgba(201, 160, 209, 0.5), rgba(0, 0, 0, 0.4));
+	padding-left:7px;
+	padding-right:9px;
+	border-radius:0px 36px 36px 0px;
+	border:0px solid transparent;
+	margin-right:2px;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow:2px 3px rgba(251, 177, 249, 0.5);
+}
+#memory, #temperature {
+	color:#88efe8;
+	background:linear-gradient(180deg, rgba(49, 150, 163, 0.5), rgba(0, 0, 0, 0.4));
+	padding-left:7px;
+	padding-right:7px;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+}
+#temperature {
+	padding-left:10px;
+	margin-left:3px;
+	border-radius:36px 0px 0px 36px;
+	border:0px solid transparent;
+}
+
+#workspaces button {
+	background:linear-gradient(180deg, rgba(20, 20, 20, 0.5), rgba(0, 0, 0, 0.4));
+	margin-left:3px;
+	margin-right:4px;
+	padding-left:13px;
+	padding-right:16px;
+	border-radius:36px 36px 36px 36px;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow:2px 2px rgba(0, 0, 0, 0.5);
+	outline:0;
+	border:0px solid transparent;
+}
+
+#workspaces button * {
+	background:none;
+	outline:0;
+}
+
+#workspaces button:hover {
+	background:linear-gradient(180deg, rgba(142, 180, 59, 0.5), rgba(0, 0, 0, 0.4));
+	margin-left:3px;
+	margin-right:4px;
+	padding-left:13px;
+	padding-right:16px;
+	border-radius:36px 36px 36px 36px;
+	border:0px solid transparent;
+	text-shadow:2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow:2px 2px rgba(205, 238, 105, 0.5);
+}
+
+#workspaces button:hover label {
+	color:#cdee69;
+}
+
+#workspaces button.focused {
+	background:linear-gradient(180deg, rgba(200, 86, 70, 0.5), rgba(0, 0, 0, 0.4));
+	box-shadow:2px 2px rgba(224, 150, 144, 0.5);
+	border-radius:36px 36px 36px 36px;
+	border:0px solid transparent;
+	outline:0;
+	margin-left:2px;
+	margin-right:3px;
+	padding-left:13px;
+	padding-right:16px;
+}
+
+#workspaces button.focused label {
+	color:#fefefe;
+}
+

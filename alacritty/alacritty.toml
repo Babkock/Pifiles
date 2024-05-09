@@ -1,0 +1,78 @@
+shell = "/bin/fish"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+transparent_background_colors = true
+
+[colors.bright]
+black = "0x121212"
+blue = "0xace9ff"
+cyan = "0x87efe8"
+green = "0xddff78"
+magenta = "0xfbc1f9"
+red = "0xe09690"
+white = "0xffffff"
+yellow = "0xffe379"
+
+[colors.normal]
+black = "0x000000"
+blue = "0x82c3dc"
+cyan = "0x3196a3"
+green = "0x9ec64b"
+magenta = "0xd8b0c1"
+red = "0xc75646"
+white = "0xc0c0c0"
+yellow = "0xe0c04c"
+
+[colors.primary]
+background = "0x0d0000"
+foreground = "0xefefef"
+
+[font]
+size = 15
+
+[font.bold]
+family = "SpaceMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "SpaceMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "SpaceMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "SpaceMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = -2
+
+[mouse]
+hide_when_typing = true
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[window]
+decorations = "none"
+opacity = 0.5
+blur = true
+decorations_theme_variant = "Dark"
+dynamic_padding = true
+
+[cursor.style]
+shape = "Beam"
+blinking = "Always"
+[cursor.vi_mode_style]
+shape = "Beam"
+blinking = "Always"
+[cursor]
+blink_interval = 500
+
+[window.padding]
+x = 8
+y = 8

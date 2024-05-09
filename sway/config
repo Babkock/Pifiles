@@ -1,0 +1,159 @@
+xwayland enable
+set $mod Mod4
+
+set $left h
+set $right l
+set $down j
+set $up k
+
+exec --no-startup-id dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY GTK_THEME MOZ_ENABLE_WAYLAND MOZ_WEBRENDER XDG_SESSION_TYPE XCURSOR_THEME XCURSOR_SIZE XDG_CURRENT_DESKTOP
+
+output "HDMI-A-1" {
+	mode 1920x1080@60.00Hz
+	scale 1.0
+	adaptive_sync on
+	dpms on
+	transform normal
+	bg /home/pi/.config/sway/texturegradient.png fill
+}
+
+input "  mini keyboard" {
+	repeat_delay 300
+	repeat_rate 60
+	pointer_accel 1.0
+	scroll_factor 1.4
+}
+
+input "  mini keyboard Mouse" {
+	pointer_accel 1.0
+	scroll_factor 1.4
+	natural_scroll enabled
+	tap enabled
+	dwt enabled
+}
+
+input "mini keyboard Mouse" {
+	pointer_accel 1.0
+	scroll_factor 1.4
+	tap enabled
+	dwt enabled
+	natural_scroll enabled
+}
+
+input "Corsair CORSAIR K68 RGB Mechanical Gaming Keyboard" {
+	repeat_delay 300
+	repeat_rate 60
+}
+
+seat seat0 xcursor_theme "Adwaita" 35
+seat seat0 hide_cursor 5000
+
+exec --no-startup-id pkill -x autotiling
+exec_always --no-startup-id autotiling -l 2
+exec --no-startup-id pkill -x pulseaudio
+exec --no-startup-id pkill -x pipewire
+exec pipewire &
+exec waybar
+
+blur enable
+blur_passes 1
+blur_radius 2
+shadows enable
+shadow_color #00000099
+shadow_blur_radius 1
+smart_corner_radius enable
+corner_radius 40
+default_dim_inactive 0.1
+
+layer_effects "waybar" blur enable; shadows disable; corner_radius 0
+
+set $term alacritty
+
+font pango:SpaceMono Nerd Font Medium 14
+
+smart_gaps on
+smart_borders on
+gaps inner 5
+gaps outer 4
+
+client.focused #e09690bb #c7564699 #efefefff #e09690aa
+client.focused_inactive #ace9ffbb #82c3dc99 #efefefff #ace9ffaa
+client.unfocused #ddff78bb #9ec64baa #efefefff #000000aa
+
+hide_edge_borders smart_no_gaps
+
+default_border pixel 2
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 2
+
+assign [app_id="mpv"] 3
+assign [class="mpv"] 3
+assign [app_id="VLC"] 2
+assign [class="VLC"] 2
+assign [title="VLC media player"] 2
+
+for_window [app_id="mpv"] {
+	floating enable
+	focus
+	inhibit_idle fullscreen
+}
+for_window [class="mpv"] {
+	floating enable
+	focus
+	inhibit_idle fullscreen
+}
+
+bindsym $mod+Return exec $term
+
+bindsym $mod+space exec dmenu_path | fuzzel -b 82c3de88 -t ffe379ff -s c7564688 -S e09690ff -m efefefdd -M ddff78ff -D yes -x 6 -r 36 -B 2 -P 2 -f "SpaceMono Nerd Font:pixelsize=26:antialias=true" -p "$ " -C 000000cc -w 32 -d | sh
+
+bindsym $mod+Shift+c kill
+
+floating_modifier $mod normal
+
+bindsym $mod+Shift+r reload
+
+bindsym $mod+Shift+q exit
+
+bindsym $mod+Backspace exec $term -e tremc
+
+bindsym $mod+period workspace 2; exec chromium
+
+bindsym $mod+comma workspace 2; exec qutebrowser
+
+bindsym $mod+backslash exec pavucontrol
+
+bindsym $mod+$left focus left
+bindsym $mod+$right focus right
+bindsym $mod+$up focus up
+bindsym $mod+$down focus down
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Down move down
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+
+bindsym $mod+f fullscreen
+bindsym $mod+t floating toggle
