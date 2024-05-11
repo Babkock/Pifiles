@@ -7,5 +7,6 @@ if status is-interactive
 	set hydro_cmd_duration_threshold 2000
 	set fish_color_autosuggestion white
 	set fish_color_command green
+	export LS_COLORS="$(vivid generate one-dark)"
 end
 
