@@ -1,0 +1,4 @@
+function lb
+	lsblk
+end
+
