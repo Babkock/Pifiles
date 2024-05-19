@@ -1,12 +1,12 @@
 {
 	"position": "top",
-	"height": 40,
+	"height": 47,
 	"spacing": 0,
 	"output": "HDMI-A-1",
 	"reload_style_on_change": true,
 	"mode": "dock",
 	"modules-left": ["sway/workspaces", "sway/window"],
-	"modules-right": ["disk", "network", "temperature", "cpu", "memory", "custom/clock"],
+	"modules-right": ["disk", "network", "disk#drive", "temperature", "cpu", "memory", "custom/clock"],
 	"sway/workspaces": {
 		"disable-scroll": false,
 		"disable-scroll-wraparound": true,
@@ -85,7 +85,7 @@
 	},
 	"disk": {
 		"path": "/",
-		"interval": 2,
+		"interval": 1,
 		"format": "󰐿 <span style=\"italic\">{free}</span>",
 		"format-alt": "󰐿 {used}",
 		"tooltip": false
@@ -95,6 +95,13 @@
 		"interval": 1,
 		"format-ethernet": " {bandwidthDownBytes} {bandwidthUpBytes} ",
 		"format-alt": " {ipaddr} {netmask}",
+		"tooltip": false
+	},
+	"disk#drive": {
+		"path": "/mnt/drive/",
+		"interval": 1,
+		"format": " <span style=\"italic\">{free}</span>",
+		"format-alt": " {used}",
 		"tooltip": false
 	},
 	"pulseaudio": {
