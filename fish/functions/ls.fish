@@ -1,4 +1,4 @@
 function ls
-	lsd --group-directories-first --git -F $argv
+	eza --icons --group-directories-first --git --no-quotes -F $argv
 end
 

@@ -1,4 +1,4 @@
 function lstl
-	lsd --group-directories-first --git -A --tree --git --long --color always -F --blocks permission,user,size,date,name --date relative $argv
+	eza --icons --group-directories-first --git --git-repos -A -T --long --color always -F -X -h --time-style relative --level 3 $argv
 end
 

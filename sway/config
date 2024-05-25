@@ -17,14 +17,14 @@ output "HDMI-A-1" {
 	bg /home/pi/.config/sway/texturegradient.png fill
 }
 
-input "  mini keyboard" {
-	repeat_delay 300
+input "6551:9267:mini_keyboard" {
+	repeat_delay 400
 	repeat_rate 60
 	pointer_accel 1.0
 	scroll_factor 1.4
 }
 
-input "  mini keyboard Mouse" {
+input "6551:9267:mini_keyboard_Mouse" {
 	pointer_accel 1.0
 	scroll_factor 1.4
 	natural_scroll enabled
@@ -32,12 +32,17 @@ input "  mini keyboard Mouse" {
 	dwt enabled
 }
 
-input "mini keyboard Mouse" {
+input "5840:2246:Pimoroni_Keybow_2040_Keyboard" {
+	repeat_delay 400
+	repeat_rate 60
+}
+
+input "2362:9488:PixArt_USB_Optical_Mouse" {
 	pointer_accel 1.0
-	scroll_factor 1.4
-	tap enabled
-	dwt enabled
+	scroll_factor 1.2
+	accel_profile "adaptive"
 	natural_scroll enabled
+	middle_emulation enabled
 }
 
 input "Corsair CORSAIR K68 RGB Mechanical Gaming Keyboard" {
@@ -48,7 +53,7 @@ input "Corsair CORSAIR K68 RGB Mechanical Gaming Keyboard" {
 seat seat0 xcursor_theme "Adwaita" 35
 seat seat0 hide_cursor 5000
 
-exec --no-startup-id pkill -x autotiling
+exec_always --no-startup-id pkill -x autotiling
 exec_always --no-startup-id autotiling -l 2
 exec --no-startup-id pkill -x pulseaudio
 exec --no-startup-id pkill -x pipewire
@@ -65,7 +70,7 @@ smart_corner_radius enable
 corner_radius 40
 default_dim_inactive 0.1
 
-layer_effects "waybar" blur enable; shadows disable; corner_radius 0
+layer_effects "waybar" blur disable; shadows enable; corner_radius 0
 
 set $term alacritty
 

@@ -1,4 +1,4 @@
 function lsl
-	lsd --group-directories-first --git --long --color always -h -F --blocks permission,user,size,git,date,name --date relative $argv
+	eza --icons --group-directories-first --no-quotes --git --git-repos --long --color always -h -F -X --time-style relative $argv
 end
 
