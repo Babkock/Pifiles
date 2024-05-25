@@ -1,4 +1,4 @@
 function ga
-	git add "$argv"
+	git add $argv
 end
 
