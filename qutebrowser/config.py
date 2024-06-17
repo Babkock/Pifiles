@@ -84,6 +84,7 @@ c.colors.webpage.bg = '#ffffffff'
 
 config.load_autoconfig()
 
+c.auto_save.session = True
 c.completion.height = "50%"
 c.downloads.location.directory = "/home/pi"
 c.downloads.location.prompt = False
@@ -113,6 +114,7 @@ c.hints.radius = 20
 c.scrolling.bar = "always"
 c.scrolling.smooth = False
 c.qt.args = ["enable-gpu-rasterization", "ignore-gpu-blocklist", "use-gl=egl", "enable-accelerated-video-decode"]
+c.qt.highdpi = True
 c.qt.chromium.experimental_web_platform_features = "always"
 
 c.fonts.default_family = "Space Mono Nerd Font"
@@ -147,6 +149,7 @@ c.tabs.padding = {
 c.tabs.title.format = "{audio}{current_title}"
 c.tabs.title.format_pinned = "{audio}{index}"
 c.window.title_format = "{perc}{current_title}"
+c.tabs.show = "multiple"
 c.tabs.last_close = "close"
 c.tabs.mode_on_change = "restore"
 c.tabs.indicator.width = 0
@@ -154,6 +157,7 @@ c.tabs.favicons.scale = 1.3
 c.tabs.show_switching_delay = 600
 c.tabs.pinned.frozen = False
 c.completion.shrink = True
+c.url.open_base_url = True
 
 c.fileselect.handler = "external"
 c.fileselect.single_file.command = ["alacritty", "-e", "ranger", "--choosefile={}"]
