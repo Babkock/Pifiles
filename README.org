@@ -3,7 +3,13 @@
 #+EMAIL: babkock@protonmail.com
 #+LANGUAGE: en
 
-* Raspberry Pi Dotfiles
-
 This repository contains configuration files for a number of programs I use on my Raspberry Pi.
+
+* Programs Used
+
+- Alacritty
+- Fish shell
+- MPV
+- Qutebrowser
+- Sway
 
