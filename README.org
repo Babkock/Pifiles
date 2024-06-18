@@ -7,9 +7,9 @@ This repository contains configuration files for a number of programs I use on m
 
 * Programs Used
 
-- Alacritty
+- [[https://github.com/Babkock/Pifiles/blob/main/alacritty/alacritty.toml][Alacritty]]
 - Fish shell
 - MPV
 - Qutebrowser
-- Sway
+- [[https://github.com/Babkock/Pifiles/blob/main/sway/config][Sway]]
 
