@@ -29,7 +29,7 @@ background = "0x0d0000"
 foreground = "0xefefef"
 
 [font]
-size = 15
+size = 14
 
 [font.bold]
 family = "SpaceMono Nerd Font"
@@ -59,7 +59,7 @@ mouse = "Middle"
 
 [window]
 decorations = "none"
-opacity = 0.5
+opacity = 0.6
 blur = true
 decorations_theme_variant = "Dark"
 dynamic_padding = true

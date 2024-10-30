@@ -1,5 +1,5 @@
 function md
-	sudo mount /dev/sda1 /mnt/drive
+	mount /mnt/drive
 	echo "sda1 mounted"
 end
 

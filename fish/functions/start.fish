@@ -1,5 +1,5 @@
 function start
-	export GTK_THEME="Sunset-Dark"
+	export GTK_THEME="Vimix-dark-ruby"
 	export GDK_BACKEND="wayland,x11"
 	export XDG_CURRENT_DESKTOP="sway"
 	export XDG_SESSION_DESKTOP="sway"

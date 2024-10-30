@@ -1,6 +1,6 @@
 {
 	"position": "top",
-	"height": 47,
+	"height": 51,
 	"spacing": 0,
 	"output": "HDMI-A-1",
 	"reload_style_on_change": true,
@@ -13,12 +13,12 @@
 		"enable-bar-scroll": true,
 		"format": "{icon}",
 		"format-icons": {
-			"1": "",
+			"1": "",
 			"2": "",
 			"3": "",
 			"4": "",
 			"5": "",
-			"6": "",
+			"6": "",
 			"urgent": "",
             "default": ""
 		}
@@ -126,8 +126,7 @@
 	},
 	"cpu": {
 		"format": " {usage}%",
-		"format-alt": " {avg_frequency} GHz {max_frequency} GHz",
-		"tooltip": false
+		"format-alt": " {avg_frequency} GHz {max_frequency} GHz"
 	},
 	"memory": {
 		"format": " {}%",

@@ -1,4 +1,4 @@
 function xx
-	sudo loginctl reboot
+	loginctl reboot
 end
 

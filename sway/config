@@ -14,7 +14,7 @@ output "HDMI-A-1" {
 	adaptive_sync on
 	dpms on
 	transform normal
-	bg /home/pi/.config/sway/texturegradient.png fill
+	bg /home/pi/.config/sway/3dtriangle4k.jpg fill
 }
 
 input "6551:9267:mini_keyboard" {
@@ -53,22 +53,24 @@ input "Corsair CORSAIR K68 RGB Mechanical Gaming Keyboard" {
 seat seat0 xcursor_theme "Adwaita" 35
 seat seat0 hide_cursor 5000
 
-exec_always --no-startup-id pkill -x autotiling
-exec_always --no-startup-id autotiling -l 2
+exec pkill -x autotiling
+exec autotiling -l 2 &
 exec pkill -x pulseaudio
 exec pkill -x pipewire
 exec pipewire &
-exec waybar
+exec waybar &
 
-blur enable
-blur_passes 1
-blur_radius 2
+#blur enable
+#blur_passes 1
+#blur_radius 1
 shadows enable
 shadow_color #00000099
-shadow_blur_radius 1
+#shadow_blur_radius 1
 smart_corner_radius enable
-corner_radius 40
+corner_radius 38
 default_dim_inactive 0.1
+
+#blur_ignore_transparent enable
 
 layer_effects "waybar" blur disable; shadows enable; corner_radius 0
 
@@ -85,7 +87,7 @@ client.focused #e09690bb #c7564699 #efefefff #e09690aa
 client.focused_inactive #ace9ffbb #82c3dc99 #efefefff #ace9ffaa
 client.unfocused #ddff78bb #9ec64baa #efefefff #000000aa
 
-hide_edge_borders smart_no_gaps
+hide_edge_borders --i3 smart_no_gaps
 
 default_border pixel 2
 default_floating_border pixel 1
@@ -114,6 +116,8 @@ bindsym $mod+space exec dmenu_path | fuzzel -b 82c3de88 -t ffe379ff -s c7564688 
 
 bindsym $mod+Shift+c kill
 
+bindsym F9 saturation minus 0.1
+bindsym F10 saturation plus 0.1
 bindsym F11 reload
 bindsym F12 kill
 
@@ -165,3 +169,6 @@ bindsym $mod+Shift+6 move container to workspace number 6
 
 bindsym $mod+f fullscreen
 bindsym $mod+t floating toggle
+
+bindsym $mod+s sticky toggle
+
