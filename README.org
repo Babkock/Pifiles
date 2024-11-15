@@ -13,3 +13,7 @@ This repository contains configuration files for a number of programs I use on m
 - Qutebrowser
 - [[https://github.com/Babkock/Pifiles/blob/main/sway/config][Sway]]
 
+# Screenshots
+
+[[https://raw.githubusercontent.com/Babkock/Pifiles/refs/heads/main/pics/pi.png]]
+
