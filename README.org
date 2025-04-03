@@ -8,12 +8,12 @@ This repository contains configuration files for a number of programs I use on m
 * Programs Used
 
 - [[https://github.com/Babkock/Pifiles/blob/main/alacritty/alacritty.toml][Alacritty]]
-- Fish shell
+- [[https://fishshell.com][Fish shell]]
 - MPV
-- Qutebrowser
+- [[https://github.com/qutebrowser/qutebrowser][Qutebrowser]]
 - [[https://github.com/Babkock/Pifiles/blob/main/sway/config][Sway]]
 
-# Screenshots
+* Screenshots
 
 [[https://raw.githubusercontent.com/Babkock/Pifiles/refs/heads/main/pics/pifiles.png]]
 
