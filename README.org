@@ -5,7 +5,7 @@
 
 This repository contains configuration files for a number of programs I use on my Raspberry Pi.
 
-[[https://raw.githubusercontent.com/Babkock/Pifiles/refs/heads/main/pics/poweredby.png]]
+[[https://raw.githubusercontent.com/Babkock/Pifiles/refs/heads/main/pics/coolpi.png]] [[https://raw.githubusercontent.com/Babkock/Pifiles/refs/heads/main/pics/poweredby.png]]
 
 * Programs Used
 
@@ -15,6 +15,10 @@ This repository contains configuration files for a number of programs I use on m
 - [[https://github.com/qutebrowser/qutebrowser][Qutebrowser]]
 - [[https://github.com/Babkock/Pifiles/blob/main/sway/config][Sway]]
 - [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]
+
+** Fish theme
+
+- [[https://github.com/jorgebucaran/hydro][hydro]]
 
 * Screenshots
 
