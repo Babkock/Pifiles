@@ -5,6 +5,8 @@
 
 This repository contains configuration files for a number of programs I use on my Raspberry Pi.
 
+[[https://raw.githubusercontent.com/Babkock/Pifiles/refs/heads/main/pics/poweredby.png]]
+
 * Programs Used
 
 - [[https://github.com/Babkock/Pifiles/blob/main/alacritty/alacritty.toml][Alacritty]]
@@ -12,6 +14,7 @@ This repository contains configuration files for a number of programs I use on m
 - MPV
 - [[https://github.com/qutebrowser/qutebrowser][Qutebrowser]]
 - [[https://github.com/Babkock/Pifiles/blob/main/sway/config][Sway]]
+- [[https://github.com/yt-dlp/yt-dlp][yt-dlp]]
 
 * Screenshots
 
